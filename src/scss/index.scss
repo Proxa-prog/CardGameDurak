@@ -1,0 +1,19 @@
+@import '../global.scss';
+
+@import './card.scss';
+@import './hand.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gameField {
+    width: 100vw;
+    height: 100vh;
+    background-color: burlywood;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 20% 60% 20%;
+}

@@ -1,0 +1,22 @@
+.hand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.your_hand {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.opponent_1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
