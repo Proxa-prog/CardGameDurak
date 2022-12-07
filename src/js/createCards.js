@@ -1,9 +1,13 @@
 import createDeck from "./createDeck";
 import { deck } from "/src/constants/cards";
 import { randomDeck } from "/src/constants/cards";
+import createHand from "./createHand";
 
 
-const your_hand = document.querySelector('.your_hand');
+export const findYourHand = document.querySelector('.your_hand');
+export const findOpponent_1 = document.querySelector('.opponent_1');
+export let yourHand = [];
+export let opponentHand = [];
 
 function createCard() {
     for (let i = 0; i < deck.length; i++) {
@@ -21,10 +25,4 @@ function createCard() {
 
 createDeck();
 createCard();
-
-randomDeck.forEach((item) => {
-    your_hand.appendChild(item.card);
-});
-
-
-
+createHand();
