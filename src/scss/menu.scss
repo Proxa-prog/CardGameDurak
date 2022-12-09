@@ -1,0 +1,29 @@
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.button {
+    border: none;
+    padding: 10px;
+    box-shadow: 2px 2px 5px black;
+    margin: 0 10px;
+
+    &:active {
+        box-shadow: none;
+    }
+}
+
+.endMove {
+    background-color: greenyellow;
+}
+
+.take {
+    background-color: rgb(223, 38, 24);
+}

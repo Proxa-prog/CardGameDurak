@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-.your_hand {
+.yourHand {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -12,11 +12,33 @@
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
+
+    & .card:hover {
+        animation-name: choise;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
 }
 
-.opponent_1 {
+.opponent1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
+}
+
+
+@keyframes choise {
+    from {
+        transform: translateY(-0);
+    }
+
+    to {
+        transform: translateY(-50px);
+        box-shadow: 0 -5px 30px rgb(219, 193, 23);
+    }
 }
