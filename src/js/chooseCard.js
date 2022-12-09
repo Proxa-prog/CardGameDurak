@@ -1,4 +1,5 @@
 import { yourHand } from "./createCards";
+import buttonEndMoveClick from "./endMove";
 
 export default function chooseCard(actualOpponentHand, card, gamePlace) {
     for (let i = 0; i < yourHand.length; i++) {
@@ -7,7 +8,6 @@ export default function chooseCard(actualOpponentHand, card, gamePlace) {
             hand.removeChild(card);
             gamePlace.appendChild(card)
           
-            // Противник кроет, если есть та же масть с превышающим значением
             let isCover = true;
             const newArray = Array.from(actualOpponentHand);
             
@@ -17,6 +17,7 @@ export default function chooseCard(actualOpponentHand, card, gamePlace) {
                 && Number(card.getAttribute("value")) < Number(element.getAttribute("value"))
             ));
 
+            // Противник кроет, если есть та же масть с превышающим значением
             if (isNotCover) {
                 actualOpponentHand.forEach((opponentCard) => {
                     if (
@@ -30,7 +31,11 @@ export default function chooseCard(actualOpponentHand, card, gamePlace) {
                             isCover = false;
                     }
                 });
+            } else {
+                // buttonEndMoveClick(isNotCover);
+                console.log("Беру")
             }
+            buttonEndMoveClick(isNotCover);
         }
     }
 };
